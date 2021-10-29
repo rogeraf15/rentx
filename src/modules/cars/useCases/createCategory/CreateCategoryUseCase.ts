@@ -1,4 +1,3 @@
-import { Category } from "../../model/Category";
 import { ICategoryRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
@@ -9,19 +8,19 @@ interface IRequest {
 class CreateCategoryUseCase {
   constructor(private categoriesRepository: ICategoryRepository) {}
 
-  execute({ name, description }: IRequest): Category {
-    const categoryAlredyExists = this.categoriesRepository.findByName(name);
+  async execute({ name, description }: IRequest): Promise<void> {
+    const categoryAlredyExists = await this.categoriesRepository.findByName(
+      name
+    );
 
     if (categoryAlredyExists) {
       throw new Error("Category alredy exists");
     }
 
-    const category = this.categoriesRepository.create({
+    this.categoriesRepository.create({
       name,
       description,
     });
-
-    return category;
   }
 }
 
