@@ -12,6 +12,7 @@ interface ISpecificationRepository {
     description,
   }: ICreateSpecificationDTO): Promise<Specification>;
   list(): Promise<Specification[]>;
+  findByIds(ids: string[]): Promise<Specification[]>;
 }
 
 export { ISpecificationRepository, ICreateSpecificationDTO };

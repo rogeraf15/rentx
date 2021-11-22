@@ -7,7 +7,7 @@ import { ISpecificationRepository } from "../../repositories/ISpecificationRepos
 @injectable()
 class ListSpecificationsUseCase {
   constructor(
-    @inject("SpecificationRepostirory")
+    @inject("SpecificationRepository")
     private specificationRepository: ISpecificationRepository
   ) {}
 
