@@ -65,8 +65,18 @@ Se o carro for devolvido com menos de 24 horas, deverá ser cobrado diária comp
 Ao realizar a devolução, o carro deverá ser liberado para o outro aluguel.
 Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel.
 Ao realizar a devolução, deverá ser calculado o total do aluguel.
-Caso o horário da devolução seja superior ao horário previsto de entrega, deverá ser cobrado
+Caso o horário da devolução seja superior ao horário previsto de entrega, deverá ser cobrado.
 multa proporcioanal aos dias de atraso.
 Caso haja multa, deverá ser somada ao total do aluguel.
 O usuário deve estar logado na aplicação.
 
+# Recuperar senha
+
+**RF**
+Deve ser possível o usuário recuperar a senha informadando o e-mail.
+O usuário deve receber um e-mail com o passo a passo para a recuperação da senha.
+O usuário deve conseguir inserir uma nova senha.
+
+**RN**
+O usuário precisa informar uma nova senha.
+O link enviado apra a recuperação deve expirar em 3 horas.
