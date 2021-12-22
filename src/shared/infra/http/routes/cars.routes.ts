@@ -11,7 +11,7 @@ import { ensureAuthenticates } from "@shared/infra/http/middlewares/ensureAuthen
 
 const carsRoutes = Router();
 
-const upload = multer(uploadConfig.upload("./tmp/cars"));
+const upload = multer(uploadConfig);
 
 const ceateCarController = new CreateCarController();
 const listAvailableCarsController = new ListAvailableCarsController();
