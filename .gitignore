@@ -1,6 +1,9 @@
 node_modules
 yarn.lock
-tmp
+tmp/*
+!tmp/.gitkeep
+.vscode
 .env
 coverage
 dist
+ormconfig.json
