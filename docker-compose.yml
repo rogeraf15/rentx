@@ -1,20 +1,20 @@
 version: "3.7"
 
 services:
-  database:
+  rentx-postgres:
     image: postgres
-    container_name: database_ignite
+    container_name: rentx-postgres
     restart: always
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_USER=docker
-      - POSTGRES_PASSWORD=ignite
-      - POSTGRES_DB=rentx
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
     volumes:
       - pgdata:/data/postgres
 
-  redis:
+  rentx-redis:
     image: redis:alpine
     ports:
       - 6379:6379
@@ -28,7 +28,8 @@ services:
   #   links:
   #     - database
   #   depends_on:
-  #     - database
+  #     - rentx-postgres
+  #     - rentx-redis
 
 volumes:
   pgdata:
