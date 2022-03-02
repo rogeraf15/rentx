@@ -1,82 +1,97 @@
-# Cadastro de carro
+<h1 align="center">
+    <img alt="rentx" src="./.github/logo.svg" />
+    <br>
+</h1>
 
-**RF**
-[x] - Deve ser possível cadastrar um novo carro.
+<p align="center">
+  <a href="https://www.linkedin.com/in/roger-fernandes-1488841b9/">
+    <img alt="linkedin" src="https://img.shields.io/badge/-Roger%20Fernandes-8257E6?style=flat&logo=Linkedin&logoColor=white">
+  </a>
 
-**RN**
-[x] - Não deve ser possível cadastrar um carro com uma placa ja existente.
-[x] - O carro deve ser cadastrado, por padrão, com disponibilidade.
-<!-- O usúario responsavel pelo cadastro deve ser um usuário administrador. -->
+  <a href="./LICENSE"> 
+    <img  alt="License" src="https://img.shields.io/badge/license-MIT-8257E6">
+  </a>
+</p>
 
-# Listagem de carros
+<h4 align="center">
+  This is project develop on the NodeJS track from the <a href="https://github.com/Rocketseat/">Rocketseat </a> Ignite bootcamp.
+</h4>
 
-**RF**
-[x] - Deve ser possível listar todos os carros disponíveis.
-[x] - Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
-[x] - Deve ser possível listar todos os carros disponíveis pelo nome da marca.
-[x] - Deve ser possível listar todos os carros disponíveis pelo nome do carro.
 
-**RN**
-[x] - O usuário náo precisa estar logado no sistema.
+<p align="center">
+  <a href="#ledger-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#running-starting">Starting</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
 
-# Cadastro de Especificação no carro
 
-**RF**
-Deve ser possível cadastrar uma especificação para um carro.
-Deve ser possível listar todas as especificações.
-Deve ser possível listar todos os carros.
+## :ledger: About
+Application to manage car rental.
 
-**RN**
-Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
-Não deve ser possível cadastrar uma mesma especificação para um mesmo carro.
+## :running: Starting
+Import the `./Insomnia.json` on Insomnia App.
 
-# Cadastro de imagens no carro
+Before starting :checkered_flag:, you need to have installed:
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://classic.yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- [Docker](https://www.docker.com/)  
+- [Docker Compose](https://docs.docker.com/compose/)
 
-**RF**
-Deve ser possível cadastrar varias images para um carro.
-Deve ser possível listar todos os carros.
+**Clone the project and access the folder**
 
-**RNF**
-Utilizar o multer para upload dos arquivos
+```bash
+git clone https://github.com/rogeraf15/rentx && cd rentx
+```
 
-**RN**
-O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
-O usúario responsavel pelo cadastro deve ser um usuário administrador.
+**Follow the steps below**
 
-# Aluguel de carro para um usuário
+```bash
+# Install the dependencies
+$ yarn
 
-**RF**
-Deve ser possível cadastrar um aluguel.
+# Make a copy of '.env.example' to '.env'
+# and set with YOUR environment variables
+# The aws variables do not need to be filled for dev environment
+$ cp .env.example .env
 
-**RN**
-O aluguel deve duração minima de 24 horas.
-Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
-Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
-O usuário deve estar logado na aplicação.
-Ao realizar um aluguel, o status do carro deverá ser alterado para indísponivel.
+# Make a copy of 'ormconfig.example.json' to 'ormconfig.json'
+# In ormconfig.json replace the values inside the "!" with the values from your .env
+$ cp ormconfig.example.json ormconfig.json
 
-# Devolução de carro
+# Start all the services and the application with Docker Compose
+$ docker-compose up -d
 
-**RF**
-Deve ser possível realizar a devolução de um carro.
+# Once the services are running, run the migrations
+$ yarn migration:run
 
-**RN**
-Se o carro for devolvido com menos de 24 horas, deverá ser cobrado diária completa.
-Ao realizar a devolução, o carro deverá ser liberado para o outro aluguel.
-Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel.
-Ao realizar a devolução, deverá ser calculado o total do aluguel.
-Caso o horário da devolução seja superior ao horário previsto de entrega, deverá ser cobrado.
-multa proporcioanal aos dias de atraso.
-Caso haja multa, deverá ser somada ao total do aluguel.
-O usuário deve estar logado na aplicação.
+# Run the seeds
+$ yarn seed:run
 
-# Recuperar senha
+# To finish, run the api service
+$ yarn dev:server
 
-**RF**
-Deve ser possível o usuário recuperar a senha informadando o e-mail.
-O usuário deve receber um e-mail com o passo a passo para a recuperação da senha.
-O usuário deve conseguir inserir uma nova senha.
+# The server will initialize in the <http://localhost:3333>
+```
 
-**RN**
-O usuário precisa informar uma nova senha.
-O link enviado apra a recuperação deve expirar em 3 horas.
+## :computer: Technologies
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/)
+- [Multer](https://github.com/expressjs/multer)
+- [TypeORM](https://typeorm.io/#/)
+- [JSON Web Token](https://jwt.io/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Jest](https://jestjs.io/)
+- [SuperTest](https://github.com/visionmedia/supertest)
+
+
+
+## :memo: License
+
+This project is under the MIT license. See the [LICENSE](./LICENSE) for more information.
+
+---
+
+Made with ♥ by Roger Fernandes :wave: [Get in touch!](https://www.linkedin.com/in/roger-fernandes-1488841b9/)
+

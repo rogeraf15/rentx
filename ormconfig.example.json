@@ -1,10 +1,10 @@
 {
   "type": "postgres",
-  "port": 5432,
-  "host": "localhost",
-  "username": "",
-  "password": "",
-  "database": "",
+  "port": !POSTGRES_PORT!,
+  "host": !POSTGRES_PORT!,
+  "username": !POSTGRES_USER!,
+  "password": !POSTGRES_PASSWORD!,
+  "database": !POSTGRES_DB!,
   "entities": ["./src/modules/**/infra/typeorm/entities/*.ts"],
   "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
   "cli": {
