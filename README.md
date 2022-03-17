@@ -78,10 +78,15 @@ $ yarn dev:server
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com/)
-- [Multer](https://github.com/expressjs/multer)
-- [TypeORM](https://typeorm.io/#/)
 - [JSON Web Token](https://jwt.io/)
+- [TSyringe](https://github.com/microsoft/tsyringe)
+- [TypeORM](https://typeorm.io/#/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [Redis](https://redis.io)
+- [Multer](https://github.com/expressjs/multer)
+- [Nodemailer](https://nodemailer.com/about/)
+- [Handlebars](https://handlebarsjs.com)
+- [Dayjs](https://day.js.org)
 - [Jest](https://jestjs.io/)
 - [SuperTest](https://github.com/visionmedia/supertest)
 
