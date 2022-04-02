@@ -63,7 +63,7 @@ $ cp ormconfig.example.json ormconfig.json
 $ docker-compose up -d
 
 # Once the services are running, run the migrations
-$ yarn migration:run
+$ yarn typeorm migration:run
 
 # Run the seeds
 $ yarn seed:run
