@@ -66,10 +66,10 @@ $ docker-compose up -d
 $ yarn typeorm migration:run
 
 # Run the seeds
-$ yarn seed:run
+$ yarn seed:admin
 
 # To finish, run the api service
-$ yarn dev:server
+$ yarn dev
 
 # The server will initialize in the <http://localhost:3333>
 ```
